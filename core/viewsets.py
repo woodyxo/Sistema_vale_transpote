@@ -39,7 +39,7 @@ class UserViewSet(viewsets.ModelViewSet):
     search_fields = ['name', 'email', 'cpf']
     ordering_fields = ['name', 'created_at', 'status']
     ordering = ['name']
-    http_method_names = ['get', 'post', 'patch', 'head', 'options']
+    http_method_names = ['get', 'post', 'patch', 'delete', 'head', 'options']
 
     def get_serializer_class(self):
         if self.action in ['create', 'partial_update']:
